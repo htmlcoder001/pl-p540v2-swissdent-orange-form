@@ -15,7 +15,8 @@
     <link rel="stylesheet" href="css/roulette.css" type="text/css">
     <meta property="og:type" content="article">
     <meta property="og:title" content="Uśmiech wskrzeszony z ciemności: jak Andrzej Piaseczny pokonał swoje kompleksy i odkrył nową radość dzięki ruchomym licówkom">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <style type="text/css">
 a,
@@ -31,6 +32,42 @@ a:visited,
     color: #999;
 }
 </style>
+    <style>
+        .webt-article-img {
+            max-width: 600px;
+            width: 100%;
+            display: block;
+            margin: 0 auto;
+        }
+        .blur1 {
+            margin: 20px auto;
+            font-size: 0;
+            line-height: 0;
+            overflow: hidden;
+            cursor: pointer;
+            position: relative;
+        }
+        .blur1::before {
+            content: "18+";
+            color: #fff;
+            font-weight: bold;
+            font-size: 100px;
+            position: absolute;
+            top: 45%;
+            margin-left: auto;
+            margin-right: auto;
+            left: 0;
+            right: 0;
+            text-align: center;
+            z-index: 1;
+            text-shadow: 0 0 10px #000;
+            font-family: sans-serif!important;
+        }
+        .blur {
+            filter: blur(.7);
+            -webkit-filter: blur(10px);
+        }
+    </style>
 </head>
 
 <body class="post-template-default single single-post postid-58 single-format-standard wp-embed-responsive sidebar-right" style="margin-bottom: 142px;">
@@ -70,217 +107,340 @@ a:visited,
     <div id="page" class="site">
         
         <!-- Header -->
-        <link href="https://fonts.cdnfonts.com/css/courier-new" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+        <style>
+            @font-face{
+                font-family: "AvertaStd-Bold";
+                src: url("fonts/447315c0c330fd423c8e1cc18024669d.eot");
+                src: url("fonts/447315c0c330fd423c8e1cc18024669d.eot?#iefix")format("embedded-opentype"),
+                url("fonts/447315c0c330fd423c8e1cc18024669d.woff")format("woff"),
+                url("fonts/447315c0c330fd423c8e1cc18024669d.woff2")format("woff2"),
+                url("fonts/447315c0c330fd423c8e1cc18024669d.ttf")format("truetype"),
+                url("fonts/447315c0c330fd423c8e1cc18024669d.svg#AvertaStd-Bold")format("svg");
+                font-weight:normal;
+                font-style:normal;
+                font-display:swap;
+            }
+
+            @font-face{
+                font-family: "AvertaStd-Regular";
+                src: url("fonts/19b8f54eb1f074fb01efb1c4f02e9623.eot");
+                src: url("fonts/19b8f54eb1f074fb01efb1c4f02e9623.eot?#iefix")format("embedded-opentype"),
+                url("fonts/19b8f54eb1f074fb01efb1c4f02e9623.woff")format("woff"),
+                url("fonts/19b8f54eb1f074fb01efb1c4f02e9623.woff2")format("woff2"),
+                url("fonts/19b8f54eb1f074fb01efb1c4f02e9623.ttf")format("truetype"),
+                url("fonts/19b8f54eb1f074fb01efb1c4f02e9623.svg#AvertaStd-Regular")format("svg");
+                font-weight:normal;
+                font-style:normal;
+                font-display:swap;
+            }
+        </style>
         <style>
             .webt-header {
-                height: 80px;
-                width: 100%;
-                background-color: #fff;
-                -webkit-box-shadow: 0px -2px 20px 0px rgba(214,214,214,1);
-                -moz-box-shadow: 0px -2px 20px 0px rgba(214,214,214,1);
-                box-shadow: 0px -2px 20px 0px rgba(214,214,214,1);
-                margin-bottom: 60px;
+                padding-top: 16px;
+                margin-bottom: 32px;
             }
             .webt-header__wrapper {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
+                max-width: 1280px;
                 width: 100%;
-                height: 100%;
-                padding-left: 48px;
-                padding-right: 48px;
+                margin: 0 auto;
             }
-            .webt-wrapper__left {
+            .webt-header__top {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+            .webt-top__col {
+            
+            }
+            .webt-top__toggle {
                 display: flex;
                 align-items: center;
                 justify-content: flex-start;
-                gap: 24px;
+                gap: 8px;
             }
-            .webt-wrapper__burger {
+            .webt-toggle__text,
+            .webt-toggle__text:hover,
+            .webt-toggle__text:focus {
+                font-size: 12px;
+                font-family: 'AvertaStd-Regular'!important;
+                color: #000;
+                text-decoration: none;
+                font-weight: 400;
+            }
+            .webt-toggle__link,
+            .webt-toggle__link:hover,
+            .webt-toggle__link:focus {
+                border-bottom: 1px solid #000;
+                padding-bottom: 5px;
+                color: #000;
+                font-size: 12px;
+                font-family: 'AvertaStd-Bold'!important;
                 display: block;
-                width: 27px;
-                height: 44px;
-                background-image: url(images/burger.png);
-                background-position: center;
-                background-repeat: no-repeat;
-                -webkit-background-size: auto;
-                -moz-background-size: auto;
-                -o-background-size: auto;
-                background-size: auto;
-                -webkit-transition: all .3s;
-                -moz-transition: all .3s;
-                -ms-transition: all .3s;
-                -o-transition: all .3s;
-                transition: all .3s;
+                text-decoration: none;
             }
-            .webt-wrapper__burger:hover {
-            
-            }
-            .webt-wrapper__logo {
-            
-            }
-            .webt-logo__img {
-                max-height: 26px;
-                max-width: 101.5px;
-                width: 100%;
-            }
-            .webt-wrapper__nav {
+            .webt-top__actions {
                 display: flex;
                 align-items: center;
-                justify-content: space-between;
-                gap: 50px;
+                justify-content: flex-end;
+                gap: 20px;
             }
-            .webt-nav__link {
-                font-family: "Courier New"!important;
-                position: relative;
-                font-size: 13px;
-                letter-spacing: 1px;
-                font-weight: bold;
-                text-transform: uppercase;
-                -webkit-transition: all .3s;
-                -moz-transition: all .3s;
-                -ms-transition: all .3s;
-                -o-transition: all .3s;
-                transition: all .3s;
+            .webt-actions__item {
+                padding-bottom: 5px;
+                color: #000;
+                border-bottom: 1px solid #000;
+                font-family: 'AvertaStd-Regular'!important;
+                font-size: 12px;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                gap: 5px;
                 text-decoration: none;
-                color: #353535;
             }
-            .webt-nav__link:after {
-                content: '';
-                display: block;
-                position: absolute;
-                width: 0;
-                bottom: -12px;
-                background-color: #353535;
-                height: 1px;
-                left: 50%;
-                -webkit-transform: translateX(-50%);
-                -moz-transform: translateX(-50%);
-                -ms-transform: translateX(-50%);
-                -o-transform: translateX(-50%);
-                transform: translateX(-50%);
-                -webkit-transition: all .3s;
-                -moz-transition: all .3s;
-                -ms-transition: all .3s;
-                -o-transition: all .3s;
-                transition: all .3s;
+            .webt-actions__item svg {
+                fill: #000;
             }
-            .webt-nav__link:hover {
-                text-decoration: none;
-                color: #353535;
+            .webt-actions__item:hover {
+                border-bottom: 1px solid transparent;
+                color: #000!important;
             }
-            .webt-nav__link:hover:after {
+            .webt-header__logo {
+                max-width: 300px;
                 width: 100%;
-            }
-            .webt-wrapper__socials {
-                width: 195px;
-                height: 30px;
-                display: block;
-                background-image: url(images/socials.png);
-                -webkit-background-size: contain;
-                background-size: contain;
-                background-position: center;
-                background-repeat: no-repeat;
-            }
-            
-            .webt-article-img {
-                max-width: 600px;
-                width: 100%;
-                display: block;
                 margin: 0 auto;
+                display: block;
+                padding-bottom: 40px;
+                padding-top: 20px;
+            }
+            .webt-logo__image {
+                width: 100%;
+            }
+            .webt-header__bottom {
+                position: relative;
+            }
+            .webt-bottom__nav {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 30px;
+            }
+            .webt-nav__item {
+                color: #000;
+                text-decoration: none;
+                font-family: 'AvertaStd-Bold'!important;
+                font-size: 14px;
+                text-transform: uppercase;
+            }
+            .webt-nav__item:hover,
+            .webt-nav__item.--active {
+                color: #aaa;
+            }
+            .webt-bottom__search {
+                position: absolute;
+                right: 0;
+                top: 50%;
+    
+                -webkit-transform: translateY(-50%);
+                -moz-transform: translateY(-50%);
+                -ms-transform: translateY(-50%);
+                -o-transform: translateY(-50%);
+                transform: translateY(-50%);
+                text-decoration: none;
+            }
+            .webt-bottom__search:hover {
+                opacity: 0.8;
+            }
+            .webt-breadcrumbs {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+    
+                background-color: #fff;
+                border-bottom: 1px solid #f2f2f2;
+                border-radius: 0;
+                font-family: 'AvertaStd-Regular'!important;
+                font-size: 14px;
+                list-style: none;
+                padding: 20px;
+                text-transform: none;
+                text-decoration: none;
+    
+                max-width: 1280px;
+                margin: 10px auto 30px auto;
+            }
+            .webt-breadcrumbs__item,
+            .webt-breadcrumbs__item:hover,
+            .webt-breadcrumbs__item:focus {
+                color: #1a1918;
+                font-family: 'AvertaStd-Regular'!important;
+                text-decoration: none;
+            }
+            .webt-breadcrumbs__item:before {
+                color: #9f9f9f;
+                content: "\003e";
+                font-size: .778em!important;
+                padding: 0 4px;
+            }
+            .--active-breadcrumb {
+                color: grey;
+            }
+            .webt-breadcrumbs__item:first-child:before {
+                display: none;
+            }
+            .webt-bottom__mobile {
+                display: none;
             }
 
-            .blur1 {
-                margin: 20px auto;
-                font-size: 0;
-                line-height: 0;
-                overflow: hidden;
-                cursor: pointer;
-                position: relative;
+            /* Sidebar */
+            .widget-articles {
+                background: #f6f6f6;
+                padding: 10px 0 0 0;
             }
-            .blur1::before {
-                content: "18+";
-                color: #fff;
-                font-weight: bold;
-                font-size: 100px;
-                position: absolute;
-                top: 45%;
-                margin-left: auto;
-                margin-right: auto;
-                left: 0;
-                right: 0;
-                text-align: center;
-                z-index: 1;
-                text-shadow: 0 0 10px #000;
-                font-family: sans-serif!important;
+            .post-card__title a {
+                font-family: 'Playfair Display', serif!important;
+                font-size: 14px!important;
+                line-height: 20px!important;
+                font-weight: 400!important;
+                color: #1a1918!important;
+                display: block;
+                text-decoration: none;
             }
-            .blur {
-                filter: blur(.7);
-                -webkit-filter: blur(10px);
+            .post-card__meta {
+                display: none!important;
+            }
+            .post-card--horizontal .post-card__thumbnail {
+                margin-right: 10px;
+                width: 90px;
+                height: 90px;
+                flex: 0 0 90px;
+            }
+            .post-card--horizontal .post-card__thumbnail img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .post-card--vertical .post-card__title a {
+                font-size: 16px!important;
+            }
+            .widget-area .widget-articles .post-card {
+                margin-bottom: 10px;
+                border-bottom: 2px solid #ffffff;
+                padding: 0 10px 10px 10px;
+            }
+            .post-card:hover .post-card__title a {
+                color: #aaa!important;
             }
             
-            @media (max-width: 1660px) {
-                .webt-wrapper__nav {
-                    gap: 24px;
-                }
-            }
-            @media (max-width: 1440px) {
-                .webt-wrapper__socials {
-                    width: 30px;
-                    height: 30px;
-                    display: block;
-                    background-image: url(images/socials.png);
-                    -webkit-background-size: contain;
-                    background-size: cover;
-                    background-position: left;
-                    background-repeat: no-repeat;
-                }
-                .webt-header__wrapper {
-                    padding-left: 24px;
-                    padding-right: 24px;
-                }
-            }
-            @media (max-width: 1240px) {
-                .webt-wrapper__nav {
-                    display: none;
-                }
+            
+            @media (max-width: 1280px) {
                 .webt-header {
-                    height: 60px;
-                }
-                .webt-header__wrapper {
                     padding-left: 12px;
                     padding-right: 12px;
                 }
             }
-            @media (max-width: 575px) {
-                .webt-header {
-                    height: 45px;
+            @media (max-width: 960px) {
+                .webt-header__logo {
+                    max-width: 250px;
                 }
+                .webt-header {
+                    margin-bottom: 16px;
+                    padding-top: 12px;
+                }
+            }
+            @media (max-width: 768px) {
+                .webt-bottom__mobile {
+                    display: block;
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    -webkit-transform: translateY(-50%);
+                    -moz-transform: translateY(-50%);
+                    -ms-transform: translateY(-50%);
+                    -o-transform: translateY(-50%);
+                    transform: translateY(-50%);
+                }
+                .webt-header__bottom {
+                    height: 30px;
+                }
+                .webt-bottom__nav,
+                .webt-breadcrumbs {
+                    display: none;
+                }
+                .webt-header__logo {
+                    width: 180px;
+                }
+                .webt-header {
+                    padding-bottom: 10px;
+                    border-bottom: 1px solid #ededed;
+                }
+            }
+            @media (max-width: 575px) {
+                .webt-actions__item:nth-child(2) {
+                    display: none;
+                }
+                .webt-header__logo {
+                    width: 120px;
+                    padding-bottom: 12px;
+                }
+            }
+            @media (max-width: 375px) {
+    
             }
         </style>
         
+        
         <header class="webt-header">
             <div class="webt-header__wrapper">
-                <div class="webt-wrapper__left">
-                    <a href="#roulette" class="webt-wrapper__burger"></a>
-                    <a href="#roulette" class="webt-wrapper__logo">
-                        <img src="images/logo.svg" alt="" class="webt-logo__img">
+                <div class="webt-header__top">
+                    <div class="webt-top__col webt-top__toggle">
+                        <a href="#form_section" class="webt-toggle__text">Nasze serwisy:</a>
+                        <a href="#form_section" class="webt-toggle__link">ELLE</a>
+                        <svg viewBox="0 0 3.859 6.4" class="icon" width="4" height="6">
+                            <use xlink:href="images/icon-arrow.svg#more-top-menu"></use>
+                        </svg>
+                    </div>
+                    <div class="webt-top__col webt-top__actions">
+                        <a href="#form_section" class="webt-actions__item">
+                            <svg viewBox="0 0 17.6 12.6" class="icon" width="17" height="12">
+                                <use xlink:href="images/icons.ca53d6a9.svg#newsletter-icon"></use>
+                            </svg>
+                            NEWSLETTER
+                        </a>
+                        <a href="#form_section" class="webt-actions__item">
+                            ZAMÓW PRENUMERATĘ
+                            <svg viewBox="0 0 13 6.27" class="icon" width="13" height="6">
+                                <use xlink:href="images/icons.ca53d6a9.svg#next-icon"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <a href="#form_section" class="webt-header__logo">
+                    <img src="images/logo-el.svg" alt="" class="webt-logo__image">
+                </a>
+                <div class="webt-header__bottom">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="19" height="16" viewBox="0 0 19 16" class="webt-bottom__mobile"><path fill-rule="evenodd" d="M0 0h19v2H0V0zm0 7h14v2H0V7zm0 7h19v2H0v-2z"></path></svg>
+                    <nav class="webt-bottom__nav">
+                        <a href="#form_section" class="webt-nav__item">MODA</a>
+                        <a href="#form_section" class="webt-nav__item">URODA</a>
+                        <a href="#form_section" class="webt-nav__item">LIFESTYLE</a>
+                        <a href="#form_section" class="webt-nav__item --active">LUDZIE</a>
+                        <a href="#form_section" class="webt-nav__item">KULTURA</a>
+                        <a href="#form_section" class="webt-nav__item">WIDEO</a>
+                        <a href="#form_section" class="webt-nav__item">SKLEP</a>
+                    </nav>
+                    <a href="#form_section" class="webt-bottom__search">
+                        <svg viewBox="0 0 16 16" class="icon" width="20" height="20">
+                            <use xlink:href="images/icon-search.svg#search-icon"></use>
+                        </svg>
                     </a>
                 </div>
-                <nav class="webt-wrapper__nav">
-                    <a href="#roulette" class="webt-nav__link">Vogue Polska Beauty Awards</a>
-                    <a href="#roulette" class="webt-nav__link">Moda</a>
-                    <a href="#roulette" class="webt-nav__link">Uroda</a>
-                    <a href="#roulette" class="webt-nav__link">Kultura</a>
-                    <a href="#roulette" class="webt-nav__link">Ludzie</a>
-                    <a href="#roulette" class="webt-nav__link">Styl życia</a>
-                    <a href="#roulette" class="webt-nav__link">Video</a>
-                    <a href="#roulette" class="webt-nav__link">BCG x Vogue Polska</a>
-                    <a href="#roulette" class="webt-nav__link">Podcasty</a>
-                </nav>
-                <a href="#roulette" class="webt-wrapper__socials"></a>
             </div>
         </header>
+        
+        <div class="webt-breadcrumbs">
+            <a href="#form_section" class="webt-breadcrumbs__item">Elle.pl</a>
+            <a href="#form_section" class="webt-breadcrumbs__item --active-breadcrumb">Ludzie</a>
+        </div>
         <!-- // Header -->
         
         <div id="content" class="site-content fixed main-content-font">
@@ -359,11 +519,11 @@ a:visited,
                 <aside id="js_sidebar" class="widget-area" itemscope itemtype="http://schema.org/WPSideBar">
                     <div class="sticky-sidebar js-sticky-sidebar">
                         <div id="wpshop_widget_articles-9" class="widget widget_wpshop_widget_articles">
-                            <div class="widget-header">Ostatnio opublikowane</div>
+                            <div class="widget-header" style="display: none">Ostatnio opublikowane</div>
                             <div class="widget-articles">
                                 <article class="post-card post-card--vertical">
                                     <div class="post-card__thumbnail">
-                                        <a href="#roulette" class="scrollto">
+                                        <a href="#form_section" class="scrollto">
                                             <picture>
                                                 <source srcset="images/news-1.jpg" type="image/jpg">
                                                 <img alt="img" width="335" height="220" src="images/news-1.jpg" class="attachment-reboot_small size-reboot_small wp-post-image lazyloaded">
@@ -372,16 +532,16 @@ a:visited,
                                     </div>
                                     <div class="post-card__body">
                                         <div class="post-card__title">
-                                            <a href="#roulette" class="scrollto">Silne trzęsienia ziemi odsłoniły tajemnice wewnętrznego jądra Ziemi</a>
+                                            <a href="#form_section" class="scrollto">Silne trzęsienia ziemi odsłoniły tajemnice wewnętrznego jądra Ziemi</a>
                                         </div>
                                         <div class="post-card__meta">
                                             <span class="post-card__comments">23</span>
                                         </div>
                                     </div>
                                 </article>
-                                <article class="post-card post-card--vertical">
+                                <article class="post-card post-card--horizontal">
                                     <div class="post-card__thumbnail">
-                                        <a href="#roulette" class="scrollto">
+                                        <a href="#form_section" class="scrollto">
                                             <picture>
                                                 <source srcset="images/1235.jpg" type="image/png">
                                                 <img alt="img" loading="lazy" width="335" height="220" src="images/1235.jpg" class="attachment-reboot_small size-reboot_small wp-post-image lazyloaded" data-key="27">
@@ -390,16 +550,16 @@ a:visited,
                                     </div>
                                     <div class="post-card__body">
                                         <div class="post-card__title">
-                                            <a href="#roulette" class="scrollto">Zostań wolontariuszem, by pomóc w dbaniu o planetę</a>
+                                            <a href="#form_section" class="scrollto">Zostań wolontariuszem, by pomóc w dbaniu o planetę</a>
                                         </div>
                                         <div class="post-card__meta">
                                             <span class="post-card__comments">4</span>
                                         </div>
                                     </div>
                                 </article>
-                                <article class="post-card post-card--vertical">
+                                <article class="post-card post-card--horizontal">
                                     <div class="post-card__thumbnail">
-                                        <a href="#roulette" class="scrollto">
+                                        <a href="#form_section" class="scrollto">
                                             <picture>
                                                 <source srcset="images/news-2.jpg" type="image/jpg">
                                                 <img alt="img" loading="lazy" width="335" height="220" src="images/news-2.jpg" class="attachment-reboot_small size-reboot_small wp-post-image lazyloaded" data-key="28">
@@ -408,16 +568,16 @@ a:visited,
                                     </div>
                                     <div class="post-card__body">
                                         <div class="post-card__title">
-                                            <a href="#roulette" class="scrollto">Naukowcy wymieniają, ile czasu należy poświęcić na aktywność fizyczną</a>
+                                            <a href="#form_section" class="scrollto">Naukowcy wymieniają, ile czasu należy poświęcić na aktywność fizyczną</a>
                                         </div>
                                         <div class="post-card__meta">
                                             <span class="post-card__comments">51</span>
                                         </div>
                                     </div>
                                 </article>
-                                <article class="post-card post-card--vertical">
+                                <article class="post-card post-card--horizontal">
                                     <div class="post-card__thumbnail">
-                                        <a href="#roulette" class="scrollto">
+                                        <a href="#form_section" class="scrollto">
                                             <picture>
                                                 <source srcset="images/1237.jpg" type="image/png">
                                                 <img alt="img" loading="lazy" width="335" height="220" src="images/1237.jpg" class="attachment-reboot_small size-reboot_small wp-post-image lazyloaded" data-key="29">
@@ -426,7 +586,7 @@ a:visited,
                                     </div>
                                     <div class="post-card__body">
                                         <div class="post-card__title">
-                                            <a href="#roulette" class="scrollto">Ilse Bing: pionierka fotografii między abstrakcją a ruchem</a>
+                                            <a href="#form_section" class="scrollto">Ilse Bing: pionierka fotografii między abstrakcją a ruchem</a>
                                         </div>
                                         <div class="post-card__meta">
                                             <span class="post-card__comments">13</span>
@@ -1124,311 +1284,318 @@ a:visited,
                     }
                 }
             </style>
-            <div class="vk-container">
-                <div class="comments">
-                    <div class="comment">
-                        <img class="avatar" src="images/comments/com-1.jpg">
-                        <div class="comm_text">
-                            <div class="emodji">
-                                <img src="./images/like.png" alt="">
-                                4
+            <div class="vk-container" style="float: none;">
+                <div class="vk-header">
+                    <div class="vk-logo"></div>
+                    <div class="vk-header-text"><span class="comment-count">194 Komentarze</span></div>
+                </div>
+                <div class="vk-container">
+                    <div class="comments">
+                        <div class="comment">
+                            <img class="avatar" src="images/comments/com-1.jpg">
+                            <div class="comm_text">
+                                <div class="emodji">
+                                    <img src="./images/like.png" alt="">
+                                    4
+                                </div>
+                                <p class="user_name">Czesław Krupa</p>
+                                <p class="text">Zakup tych licówek był moją najlepszą inwestycją w siebie! Kupiłem je na wyprzedaży, nie oczekiwałem zbyt wiele, ale myliłem się. Jakość jest doskonała, w ustach nie przeszkadzają, szybko się do nich przyzwyczajasz i łatwo się je zakłada. Polecam!</p>
                             </div>
-                            <p class="user_name">Czesław Krupa</p>
-                            <p class="text">Zakup tych licówek był moją najlepszą inwestycją w siebie! Kupiłem je na wyprzedaży, nie oczekiwałem zbyt wiele, ale myliłem się. Jakość jest doskonała, w ustach nie przeszkadzają, szybko się do nich przyzwyczajasz i łatwo się je zakłada. Polecam!</p>
-                        </div>
-                        <div class="down-menu">
-                            <p class="down-menu-like">Podoba mi się</p>
-                            <p class="down-menu-answer none">Odpowiedz</p>
-                            <p class="down-menu-translate none">Przekazanie</p>
-                            <p class="time"> godzinę temu</p>
-                        </div>
-                    </div>
-                    <div class="comment">
-                        <img class="avatar" src="images/comments/com-2.jpg">
-                        <div class="comm_text">
-                            <div class="emodji">
-                                <img src="./images/like.png" alt="">
-                                <img src="./images/heart.png" alt="">
+                            <div class="down-menu">
+                                <p class="down-menu-like">Podoba mi się</p>
+                                <p class="down-menu-answer none">Odpowiedz</p>
+                                <p class="down-menu-translate none">Przekazanie</p>
+                                <p class="time"> godzinę temu</p>
                             </div>
-                            <p class="user_name">Katarzyna Żurek</p>
-                            <p class="text">Moim zdaniem licówki SwissDent to najlepsza rzecz, jaką kiedykolwiek wynaleziono w stomatologii. Noszenie ich nie boli, po prostu masz idealne zęby.</p>
-                            <img src="images/comments/com-2-1.jpg" style="max-width: 230px;">
                         </div>
-                        <div class="down-menu">
-                            <p class="down-menu-like">Podoba mi się</p>
-                            <p class="down-menu-answer none">Odpowiedz</p>
-                            <p class="down-menu-translate none">Przekazanie</p>
-                            <p class="time"> godzinę temu</p>
-                        </div>
-                    </div>
-                    <div class="comment">
-                        <img class="avatar" src="images/comments/com-3.jpg">
-                        <div class="comm_text">
-                            <p class="user_name">Zdzisław Jakubowski</p>
-                            <p class="text">Czy ktoś, kto zamawiał te licówki, może podzielić się swoim doświadczeniem? Bo jak kiedyś zamówiłem chińskie, to był po prostu koszmar...</p>
-                
-                        </div>
-                        <div class="down-menu">
-                            <p class="down-menu-like">Podoba mi się</p>
-                            <p class="down-menu-answer none">Odpowiedz</p>
-                            <p class="down-menu-translate none">Przekazanie</p>
-                            <p class="time"> godzinę temu</p>
-                        </div>
-                    </div>
-                    <div class="comment">
-                        <img class="avatar" src="images/comments/com-4.jpg">
-                        <div class="comm_text">
-                            <p class="user_name">Iwona Mazurek</p>
-                            <p class="text">Używam ich od trzech miesięcy, są super, nie pochodzą z Chin... Są cienkie, nie ciemnieją, można pić kawę i wino, w ustach w ogóle nie są zauważalne. Wyglądają bardzo naturalnie, wszyscy moi znajomi myślą, że noszę ceramikę. Zdecydowanie polecam, szczególnie teraz!</p>
-                
-                        </div>
-                        <div class="down-menu">
-                            <p class="down-menu-like">Podoba mi się</p>
-                            <p class="down-menu-answer none">Odpowiedz</p>
-                            <p class="down-menu-translate none">Przekazanie</p>
-                            <p class="time"> godzinę temu</p>
-                        </div>
-                    </div>
-                    <div class="comment">
-                        <img class="avatar" src="images/comments/com-5.jpg">
-                        <div class="comm_text">
-                            <div class="emodji">
-                                <img src="./images/like.png" alt="">
-                                3
+                        <div class="comment">
+                            <img class="avatar" src="images/comments/com-2.jpg">
+                            <div class="comm_text">
+                                <div class="emodji">
+                                    <img src="./images/like.png" alt="">
+                                    <img src="./images/heart.png" alt="">
+                                </div>
+                                <p class="user_name">Katarzyna Żurek</p>
+                                <p class="text">Moim zdaniem licówki SwissDent to najlepsza rzecz, jaką kiedykolwiek wynaleziono w stomatologii. Noszenie ich nie boli, po prostu masz idealne zęby.</p>
+                                <img src="images/comments/com-2-1.jpg" style="max-width: 230px;">
                             </div>
-                            <p class="user_name">Sabina Zalewska</p>
-                            <p class="text">Zakup tych licówek będzie dobrym rozwiązaniem dla każdego, kto jest niezadowolony ze swoich zębów! Mam bardzo ciemne szkliwo i nie mogę go wybielić, ponieważ jest również bardzo cienkie. Myślałam o licówkach ceramicznych, ale to zrujnowałoby moje zęby. Zrobiłam obszerny research w kwestii alternatyw i wybrałam SwissDent. To był bardzo dobry wybór, którego nigdy nie pożałowałam.</p>
-                
-                        </div>
-                        <div class="down-menu">
-                            <p class="down-menu-like">Podoba mi się</p>
-                            <p class="down-menu-answer none">Odpowiedz</p>
-                            <p class="down-menu-translate none">Przekazanie</p>
-                            <p class="time"> godzinę temu</p>
-                        </div>
-                    </div>
-                    <div class="comment">
-                        <img class="avatar" src="images/comments/com-6.jpg">
-                        <div class="comm_text">
-                            <div class="emodji">
-                                <img src="./images/like.png" alt="">
-                                <img src="./images/heart.png" alt="">
+                            <div class="down-menu">
+                                <p class="down-menu-like">Podoba mi się</p>
+                                <p class="down-menu-answer none">Odpowiedz</p>
+                                <p class="down-menu-translate none">Przekazanie</p>
+                                <p class="time"> godzinę temu</p>
                             </div>
-                            <p class="user_name">Jakub Sowa</p>
-                            <p class="text">Pracuję w salonie samochodowym, uśmiech jest dla mnie wszystkim. Niestety cierpię na fluorozę, ponieważ spędziłem dzieciństwo w mieście, gdzie woda jest nasycona fluorem. Poszedłem do lekarza, aby wybielić zęby, ale zniechęcili mnie, mówiąc, że plamy nadal będą widoczne. Zaczęli namawiać na założenie fornirów, ale cena jest po prostu straszna, a ja nie zarabiam tak dużo. Postanowiłem wypróbować ruchome licówki, wybrałem SwissDent i nie pomyliłem się. Pasują idealnie, jakość jest doskonała. Wyglądają po prostu świetnie!</p>
-                            <img src="images/comments/com-6-1.jpg" style="max-width: 230px;">
                         </div>
-                        <div class="down-menu">
-                            <p class="down-menu-like">Podoba mi się</p>
-                            <p class="down-menu-answer none">Odpowiedz</p>
-                            <p class="down-menu-translate none">Przekazanie</p>
-                            <p class="time"> godzinę temu </p>
+                        <div class="comment">
+                            <img class="avatar" src="images/comments/com-3.jpg">
+                            <div class="comm_text">
+                                <p class="user_name">Zdzisław Jakubowski</p>
+                                <p class="text">Czy ktoś, kto zamawiał te licówki, może podzielić się swoim doświadczeniem? Bo jak kiedyś zamówiłem chińskie, to był po prostu koszmar...</p>
+                
+                            </div>
+                            <div class="down-menu">
+                                <p class="down-menu-like">Podoba mi się</p>
+                                <p class="down-menu-answer none">Odpowiedz</p>
+                                <p class="down-menu-translate none">Przekazanie</p>
+                                <p class="time"> godzinę temu</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="comment">
-                        <img class="avatar" src="images/comments/com-7.jpg">
-                        <div class="comm_text">
-                            <p class="user_name">Stanisława Pietrzak</p>
-                            <p class="text">Ja też pracuję z ludźmi. Staram się regularnie chodzić do dentysty, wybielać i czyścić zęby. Niedawno zauważyłam, że moje zęby stały się wrażliwe, mój lekarz powiedział, że nie powinnam już wybielać i polecił mi SwissDent jako alternatywę. Wahałam się, myślałam, że będzie to bardzo niekomfortowe i zmieni się dykcja. W końcu zdecydowałam się spróbować, ponieważ cena jest niższa niż w przypadku zwykłego oczyszczania. Wszystkie moje obawy okazały się bezpodstawne. Licówki są bardzo cienkie, więc nawet ich nie czuć, a jednocześnie bardzo trwałe. Moja dykcja się nie zmienia, licówki nie ciemnieją, nawet od kawy czy papierosów. Dobrze przylegają, więc można je nosić cały dzień i spożywać wszystkie posiłki. Materiały są wysokiej jakości. Są łatwe w pielęgnacji. Jestem bardzo zadowolona z zakupu.</p>
+                        <div class="comment">
+                            <img class="avatar" src="images/comments/com-4.jpg">
+                            <div class="comm_text">
+                                <p class="user_name">Iwona Mazurek</p>
+                                <p class="text">Używam ich od trzech miesięcy, są super, nie pochodzą z Chin... Są cienkie, nie ciemnieją, można pić kawę i wino, w ustach w ogóle nie są zauważalne. Wyglądają bardzo naturalnie, wszyscy moi znajomi myślą, że noszę ceramikę. Zdecydowanie polecam, szczególnie teraz!</p>
+                
+                            </div>
+                            <div class="down-menu">
+                                <p class="down-menu-like">Podoba mi się</p>
+                                <p class="down-menu-answer none">Odpowiedz</p>
+                                <p class="down-menu-translate none">Przekazanie</p>
+                                <p class="time"> godzinę temu</p>
+                            </div>
+                        </div>
+                        <div class="comment">
+                            <img class="avatar" src="images/comments/com-5.jpg">
+                            <div class="comm_text">
+                                <div class="emodji">
+                                    <img src="./images/like.png" alt="">
+                                    3
+                                </div>
+                                <p class="user_name">Sabina Zalewska</p>
+                                <p class="text">Zakup tych licówek będzie dobrym rozwiązaniem dla każdego, kto jest niezadowolony ze swoich zębów! Mam bardzo ciemne szkliwo i nie mogę go wybielić, ponieważ jest również bardzo cienkie. Myślałam o licówkach ceramicznych, ale to zrujnowałoby moje zęby. Zrobiłam obszerny research w kwestii alternatyw i wybrałam SwissDent. To był bardzo dobry wybór, którego nigdy nie pożałowałam.</p>
+                
+                            </div>
+                            <div class="down-menu">
+                                <p class="down-menu-like">Podoba mi się</p>
+                                <p class="down-menu-answer none">Odpowiedz</p>
+                                <p class="down-menu-translate none">Przekazanie</p>
+                                <p class="time"> godzinę temu</p>
+                            </div>
+                        </div>
+                        <div class="comment">
+                            <img class="avatar" src="images/comments/com-6.jpg">
+                            <div class="comm_text">
+                                <div class="emodji">
+                                    <img src="./images/like.png" alt="">
+                                    <img src="./images/heart.png" alt="">
+                                </div>
+                                <p class="user_name">Jakub Sowa</p>
+                                <p class="text">Pracuję w salonie samochodowym, uśmiech jest dla mnie wszystkim. Niestety cierpię na fluorozę, ponieważ spędziłem dzieciństwo w mieście, gdzie woda jest nasycona fluorem. Poszedłem do lekarza, aby wybielić zęby, ale zniechęcili mnie, mówiąc, że plamy nadal będą widoczne. Zaczęli namawiać na założenie fornirów, ale cena jest po prostu straszna, a ja nie zarabiam tak dużo. Postanowiłem wypróbować ruchome licówki, wybrałem SwissDent i nie pomyliłem się. Pasują idealnie, jakość jest doskonała. Wyglądają po prostu świetnie!</p>
+                                <img src="images/comments/com-6-1.jpg" style="max-width: 230px;">
+                            </div>
+                            <div class="down-menu">
+                                <p class="down-menu-like">Podoba mi się</p>
+                                <p class="down-menu-answer none">Odpowiedz</p>
+                                <p class="down-menu-translate none">Przekazanie</p>
+                                <p class="time"> godzinę temu </p>
+                            </div>
+                        </div>
+                        <div class="comment">
+                            <img class="avatar" src="images/comments/com-7.jpg">
+                            <div class="comm_text">
+                                <p class="user_name">Stanisława Pietrzak</p>
+                                <p class="text">Ja też pracuję z ludźmi. Staram się regularnie chodzić do dentysty, wybielać i czyścić zęby. Niedawno zauważyłam, że moje zęby stały się wrażliwe, mój lekarz powiedział, że nie powinnam już wybielać i polecił mi SwissDent jako alternatywę. Wahałam się, myślałam, że będzie to bardzo niekomfortowe i zmieni się dykcja. W końcu zdecydowałam się spróbować, ponieważ cena jest niższa niż w przypadku zwykłego oczyszczania. Wszystkie moje obawy okazały się bezpodstawne. Licówki są bardzo cienkie, więc nawet ich nie czuć, a jednocześnie bardzo trwałe. Moja dykcja się nie zmienia, licówki nie ciemnieją, nawet od kawy czy papierosów. Dobrze przylegają, więc można je nosić cały dzień i spożywać wszystkie posiłki. Materiały są wysokiej jakości. Są łatwe w pielęgnacji. Jestem bardzo zadowolona z zakupu.</p>
                 
                 
+                            </div>
+                            <div class="down-menu">
+                                <p class="down-menu-like">Podoba mi się</p>
+                                <p class="down-menu-answer none">Odpowiedz</p>
+                                <p class="down-menu-translate none">Przekazanie</p>
+                                <p class="time"> godzinę temu </p>
+                            </div>
                         </div>
-                        <div class="down-menu">
-                            <p class="down-menu-like">Podoba mi się</p>
-                            <p class="down-menu-answer none">Odpowiedz</p>
-                            <p class="down-menu-translate none">Przekazanie</p>
-                            <p class="time"> godzinę temu </p>
-                        </div>
-                    </div>
-                    <div class="comment">
-                        <img class="avatar" src="images/comments/com-8.jpg">
-                        <div class="comm_text">
-                            <p class="user_name">Marta Muszyńska</p>
-                            <p class="text">Od dawna chciałam, aby mój uśmiech był estetyczny. Moje górne zęby były brzydkie, z wypełnieniami, które z czasem ciemnieją i psują wygląd zębów. W ostatnich latach bardzo wstydziłam się uśmiechać i postawiłam sobie za cel zaoszczędzenie pieniędzy na piękne zęby, bez względu na ich cenę, ponieważ wszystko jest bardzo drogie. Podczas oszczędzania kupiłam licówki SwissDent i jestem z nich bardzo zadowolona. Teraz mogę się uśmiechać bez nieśmiałości.</p>
-                            <img src="images/comments/com-8-1.jpg" style="max-width: 230px;">
+                        <div class="comment">
+                            <img class="avatar" src="images/comments/com-8.jpg">
+                            <div class="comm_text">
+                                <p class="user_name">Marta Muszyńska</p>
+                                <p class="text">Od dawna chciałam, aby mój uśmiech był estetyczny. Moje górne zęby były brzydkie, z wypełnieniami, które z czasem ciemnieją i psują wygląd zębów. W ostatnich latach bardzo wstydziłam się uśmiechać i postawiłam sobie za cel zaoszczędzenie pieniędzy na piękne zęby, bez względu na ich cenę, ponieważ wszystko jest bardzo drogie. Podczas oszczędzania kupiłam licówki SwissDent i jestem z nich bardzo zadowolona. Teraz mogę się uśmiechać bez nieśmiałości.</p>
+                                <img src="images/comments/com-8-1.jpg" style="max-width: 230px;">
                 
+                            </div>
+                            <div class="down-menu">
+                                <p class="down-menu-like">Podoba mi się</p>
+                                <p class="down-menu-answer none">Odpowiedz</p>
+                                <p class="down-menu-translate none">Przekazanie</p>
+                                <p class="time"> godzinę temu </p>
+                            </div>
                         </div>
-                        <div class="down-menu">
-                            <p class="down-menu-like">Podoba mi się</p>
-                            <p class="down-menu-answer none">Odpowiedz</p>
-                            <p class="down-menu-translate none">Przekazanie</p>
-                            <p class="time"> godzinę temu </p>
-                        </div>
-                    </div>
-                    <div class="comment">
-                        <img class="avatar" src="images/comments/com-9.jpg">
-                        <div class="comm_text">
+                        <div class="comment">
+                            <img class="avatar" src="images/comments/com-9.jpg">
+                            <div class="comm_text">
                     
-                            <p class="user_name">Dominika Orzechowska</p>
-                            <p class="text">Czy te licówki pasują do wszystkich rodzajów zębów? Jak długo trwa dostawa?</p>
-                        </div>
-                        <div class="down-menu">
-                            <p class="down-menu-like">Podoba mi się</p>
-                            <p class="down-menu-answer none">Odpowiedz</p>
-                            <p class="down-menu-translate none">Przekazanie</p>
-                            <p class="time"> godzinę temu</p>
-                        </div>
-                    </div>
-                    <div class="comment" style="margin-left: 20px;">
-                        <img class="avatar" src="images/comments/com-10.jpg">
-                        <div class="comm_text">
-                            <div class="emodji">
-                                <img src="./images/like.png" alt="">
-                                5
+                                <p class="user_name">Dominika Orzechowska</p>
+                                <p class="text">Czy te licówki pasują do wszystkich rodzajów zębów? Jak długo trwa dostawa?</p>
                             </div>
-                            <p class="user_name">Kasia Sobczak</p>
-                            <p class="text">Dominiko, rozmiary SwissDent są uniwersalne. Dostawa trwa od jednego do trzech dni roboczych, płacisz kurierowi przy odbiorze.</p>
+                            <div class="down-menu">
+                                <p class="down-menu-like">Podoba mi się</p>
+                                <p class="down-menu-answer none">Odpowiedz</p>
+                                <p class="down-menu-translate none">Przekazanie</p>
+                                <p class="time"> godzinę temu</p>
+                            </div>
+                        </div>
+                        <div class="comment" style="margin-left: 20px;">
+                            <img class="avatar" src="images/comments/com-10.jpg">
+                            <div class="comm_text">
+                                <div class="emodji">
+                                    <img src="./images/like.png" alt="">
+                                    5
+                                </div>
+                                <p class="user_name">Kasia Sobczak</p>
+                                <p class="text">Dominiko, rozmiary SwissDent są uniwersalne. Dostawa trwa od jednego do trzech dni roboczych, płacisz kurierowi przy odbiorze.</p>
                 
                 
+                            </div>
+                            <div class="down-menu">
+                                <p class="down-menu-like">Podoba mi się</p>
+                                <p class="down-menu-answer none">Odpowiedz</p>
+                                <p class="down-menu-translate none">Przekazanie</p>
+                                <p class="time"> godzinę temu </p>
+                            </div>
                         </div>
-                        <div class="down-menu">
-                            <p class="down-menu-like">Podoba mi się</p>
-                            <p class="down-menu-answer none">Odpowiedz</p>
-                            <p class="down-menu-translate none">Przekazanie</p>
-                            <p class="time"> godzinę temu </p>
-                        </div>
-                    </div>
-                    <div class="comment" style="margin-left: 40px;">
-                        <img class="avatar" src="images/comments/com-9.jpg">
-                        <div class="comm_text">
-                            <p class="user_name">Dominika Orzechowska</p>
-                            <p class="text">Więc można zamówić dla siebie i dla swojego męża?</p>
+                        <div class="comment" style="margin-left: 40px;">
+                            <img class="avatar" src="images/comments/com-9.jpg">
+                            <div class="comm_text">
+                                <p class="user_name">Dominika Orzechowska</p>
+                                <p class="text">Więc można zamówić dla siebie i dla swojego męża?</p>
                 
                 
+                            </div>
+                            <div class="down-menu">
+                                <p class="down-menu-like">Podoba mi się</p>
+                                <p class="down-menu-answer none">Odpowiedz</p>
+                                <p class="down-menu-translate none">Przekazanie</p>
+                                <p class="time"> godzinę temu </p>
+                            </div>
                         </div>
-                        <div class="down-menu">
-                            <p class="down-menu-like">Podoba mi się</p>
-                            <p class="down-menu-answer none">Odpowiedz</p>
-                            <p class="down-menu-translate none">Przekazanie</p>
-                            <p class="time"> godzinę temu </p>
-                        </div>
-                    </div>
-                    <div class="comment" style="margin-left: 60px;">
-                        <img class="avatar" src="images/comments/com-10.jpg">
-                        <div class="comm_text">
-                            <p class="user_name">Kasia Sobczak</p>
-                            <p class="text">Tak, ja sama wybrałam tę opcję.</p>
+                        <div class="comment" style="margin-left: 60px;">
+                            <img class="avatar" src="images/comments/com-10.jpg">
+                            <div class="comm_text">
+                                <p class="user_name">Kasia Sobczak</p>
+                                <p class="text">Tak, ja sama wybrałam tę opcję.</p>
                 
                 
+                            </div>
+                            <div class="down-menu">
+                                <p class="down-menu-like">Podoba mi się</p>
+                                <p class="down-menu-answer none">Odpowiedz</p>
+                                <p class="down-menu-translate none">Przekazanie</p>
+                                <p class="time"> godzinę temu </p>
+                            </div>
                         </div>
-                        <div class="down-menu">
-                            <p class="down-menu-like">Podoba mi się</p>
-                            <p class="down-menu-answer none">Odpowiedz</p>
-                            <p class="down-menu-translate none">Przekazanie</p>
-                            <p class="time"> godzinę temu </p>
+                        <div class="comment">
+                            <img class="avatar" src="images/comments/com-11.jpg">
+                            <div class="comm_text">
+                                <p class="user_name">Joanna K.</p>
+                                <p class="text">Licówki dotarły tydzień temu. Moje zęby są dosyć krzywe, a ja nie chcę mieć aparatu ortodontycznego. Jednocześnie wstydzę się pokazywać z takimi zębami, bo nie wyglądają one zbyt ładnie. Teraz mam uśmiech jak gwiazda! Gładki i biały. Nie mam z nimi żadnych problemów, a mój uśmiech jest wspaniały.</p>
+                            </div>
+                            <div class="down-menu">
+                                <p class="down-menu-like">Podoba mi się</p>
+                                <p class="down-menu-answer none">Odpowiedz</p>
+                                <p class="down-menu-translate none">Przekazanie</p>
+                                <p class="time"> godzinę temu </p>
+                            </div>
                         </div>
+                        <div class="comment">
+                            <img class="avatar" src="images/comments/com-12.jpg">
+                            <div class="comm_text">
+                                <p class="user_name">Agnieszka Szulc</p>
+                                <p class="text">Ja również zamówiłam licówki. Dostawa była bardzo szybka, zajęła tylko dwa dni. Nawet sobie nie wyobrażasz, jak miło jest mieć hollywoodzki uśmiech!</p>
+                            </div>
+                            <div class="down-menu">
+                                <p class="down-menu-like">Podoba mi się</p>
+                                <p class="down-menu-answer none">Odpowiedz</p>
+                                <p class="down-menu-translate none">Przekazanie</p>
+                                <p class="time"> godzinę temu </p>
+                            </div>
+                        </div>
+                        <div class="comment">
+                            <img class="avatar" src="images/comments/com-13.jpg">
+                            <div class="comm_text">
+                                <p class="user_name">Michał Stasiak</p>
+                                <p class="text">Zamówiłem licówki i powinny być dostarczone jutro. Mam kilka wyszczerbionych przednich zębów i mój konsultant powiedział, że licówki zakryją moje niedoskonałości.</p>
+                                <img src="images/comments/com-13-1.jpg" style="max-width: 230px;">
+                            </div>
+                            <div class="down-menu">
+                                <p class="down-menu-like">Podoba mi się</p>
+                                <p class="down-menu-answer none">Odpowiedz</p>
+                                <p class="down-menu-translate none">Przekazanie</p>
+                                <p class="time"> godzinę temu </p>
+                            </div>
+                        </div>
+                        <div class="comment" style="margin-left: 20px;">
+                            <img class="avatar" src="images/comments/com-14.jpg">
+                            <div class="comm_text">
+                                <p class="user_name">Renata Niewiadomska</p>
+                                <p class="text">Pochwal się efektem, Michał! Mam taką samą sytuację, chciałabym spróbować, ale boję się!</p>
+                            </div>
+                            <div class="down-menu">
+                                <p class="down-menu-like">Podoba mi się</p>
+                                <p class="down-menu-answer none">Odpowiedz</p>
+                                <p class="down-menu-translate none">Przekazanie</p>
+                                <p class="time"> godzinę temu </p>
+                            </div>
+                        </div>
+                        <div class="comment" style="margin-left: 40px;">
+                            <img class="avatar" src="images/comments/com-13.jpg">
+                            <div class="comm_text">
+                                <p class="user_name">Michał Stasiak</p>
+                                <p class="text">Jestem bardzo zadowolony. Nie wahaj się, tylko zamawiaj!</p>
+                            </div>
+                            <div class="down-menu">
+                                <p class="down-menu-like">Podoba mi się</p>
+                                <p class="down-menu-answer none">Odpowiedz</p>
+                                <p class="down-menu-translate none">Przekazanie</p>
+                                <p class="time"> godzinę temu </p>
+                            </div>
+                        </div>
+                        <div class="comment">
+                            <img class="avatar" src="images/comments/com-15.jpg">
+                            <div class="comm_text">
+                                <p class="user_name">Ewa Mazurek</p>
+                                <p class="text">Dziewczyny, nie traćcie czasu na takie bzdury. Już z 10 razy robiłam wybielanie i wszystko, co tylko się da, ale to jednak nie to. Noszę te licówki już od ponad roku i ciągle dostaję mnóstwo komplementów. Jestem zachwycona!</p>
+                                <img src="images/comments/com-15-1.jpg" style="max-width: 230px;">
+                            </div>
+                            <div class="down-menu">
+                                <p class="down-menu-like">Podoba mi się</p>
+                                <p class="down-menu-answer none">Odpowiedz</p>
+                                <p class="down-menu-translate none">Przekazanie</p>
+                                <p class="time"> godzinę temu </p>
+                            </div>
+                        </div>
+                        <div class="comment">
+                            <img class="avatar" src="images/comments/com-16.jpg">
+                            <div class="comm_text">
+                                <p class="user_name">Dominika Zielińska</p>
+                                <p class="text">Moja teściowa kupiła te licówki. Są piękne! Prawdziwy hollywoodzki uśmiech. Teraz wygląda nawet młodziej niż wcześniej. Zamówiłam je również dla siebie!</p>
+                            </div>
+                            <div class="down-menu">
+                                <p class="down-menu-like">Podoba mi się</p>
+                                <p class="down-menu-answer none">Odpowiedz</p>
+                                <p class="down-menu-translate none">Przekazanie</p>
+                                <p class="time"> godzinę temu </p>
+                            </div>
+                        </div>
+                        <div class="comment">
+                            <img class="avatar" src="images/comments/com-17.jpg">
+                            <div class="comm_text">
+                                <p class="user_name">Aneta Zawadzka</p>
+                                <p class="text">Moje zęby wyglądają teraz jak prawdziwe, noszę je od czterech miesięcy i nie zmieniają koloru ani kształtu. Moje własne zęby są okropne, mam przerwę między zębami i kilka plam, a jeden wystaje z przodu. Moja mama zawsze mówiła: „Taka piękna dziewczyna, ale z tymi twoimi zębami trzeba coś zrobić”, ale ja nie mam pieniędzy i boję się dentystów. Zamówiłam SwissDent. Uważam, że piękne zęby zmieniają każdego!</p>
+                            </div>
+                            <div class="down-menu">
+                                <p class="down-menu-like">Podoba mi się</p>
+                                <p class="down-menu-answer none">Odpowiedz</p>
+                                <p class="down-menu-translate none">Przekazanie</p>
+                                <p class="time"> godzinę temu </p>
+                            </div>
+                        </div>
+                        <br>
+                        <a class="knopka" href="#form_section" style="display:block; max-width:400px; margin:0 auto">PEDIR <br>SWISSDENT</a>
+                        <br>&nbsp;<br>
                     </div>
-                    <div class="comment">
-                        <img class="avatar" src="images/comments/com-11.jpg">
-                        <div class="comm_text">
-                            <p class="user_name">Joanna K.</p>
-                            <p class="text">Licówki dotarły tydzień temu. Moje zęby są dosyć krzywe, a ja nie chcę mieć aparatu ortodontycznego. Jednocześnie wstydzę się pokazywać z takimi zębami, bo nie wyglądają one zbyt ładnie. Teraz mam uśmiech jak gwiazda! Gładki i biały. Nie mam z nimi żadnych problemów, a mój uśmiech jest wspaniały.</p>
-                        </div>
-                        <div class="down-menu">
-                            <p class="down-menu-like">Podoba mi się</p>
-                            <p class="down-menu-answer none">Odpowiedz</p>
-                            <p class="down-menu-translate none">Przekazanie</p>
-                            <p class="time"> godzinę temu </p>
-                        </div>
-                    </div>
-                    <div class="comment">
-                        <img class="avatar" src="images/comments/com-12.jpg">
-                        <div class="comm_text">
-                            <p class="user_name">Agnieszka Szulc</p>
-                            <p class="text">Ja również zamówiłam licówki. Dostawa była bardzo szybka, zajęła tylko dwa dni. Nawet sobie nie wyobrażasz, jak miło jest mieć hollywoodzki uśmiech!</p>
-                        </div>
-                        <div class="down-menu">
-                            <p class="down-menu-like">Podoba mi się</p>
-                            <p class="down-menu-answer none">Odpowiedz</p>
-                            <p class="down-menu-translate none">Przekazanie</p>
-                            <p class="time"> godzinę temu </p>
-                        </div>
-                    </div>
-                    <div class="comment">
-                        <img class="avatar" src="images/comments/com-13.jpg">
-                        <div class="comm_text">
-                            <p class="user_name">Michał Stasiak</p>
-                            <p class="text">Zamówiłem licówki i powinny być dostarczone jutro. Mam kilka wyszczerbionych przednich zębów i mój konsultant powiedział, że licówki zakryją moje niedoskonałości.</p>
-                            <img src="images/comments/com-13-1.jpg" style="max-width: 230px;">
-                        </div>
-                        <div class="down-menu">
-                            <p class="down-menu-like">Podoba mi się</p>
-                            <p class="down-menu-answer none">Odpowiedz</p>
-                            <p class="down-menu-translate none">Przekazanie</p>
-                            <p class="time"> godzinę temu </p>
-                        </div>
-                    </div>
-                    <div class="comment" style="margin-left: 20px;">
-                        <img class="avatar" src="images/comments/com-14.jpg">
-                        <div class="comm_text">
-                            <p class="user_name">Renata Niewiadomska</p>
-                            <p class="text">Pochwal się efektem, Michał! Mam taką samą sytuację, chciałabym spróbować, ale boję się!</p>
-                        </div>
-                        <div class="down-menu">
-                            <p class="down-menu-like">Podoba mi się</p>
-                            <p class="down-menu-answer none">Odpowiedz</p>
-                            <p class="down-menu-translate none">Przekazanie</p>
-                            <p class="time"> godzinę temu </p>
-                        </div>
-                    </div>
-                    <div class="comment" style="margin-left: 40px;">
-                        <img class="avatar" src="images/comments/com-13.jpg">
-                        <div class="comm_text">
-                            <p class="user_name">Michał Stasiak</p>
-                            <p class="text">Jestem bardzo zadowolony. Nie wahaj się, tylko zamawiaj!</p>
-                        </div>
-                        <div class="down-menu">
-                            <p class="down-menu-like">Podoba mi się</p>
-                            <p class="down-menu-answer none">Odpowiedz</p>
-                            <p class="down-menu-translate none">Przekazanie</p>
-                            <p class="time"> godzinę temu </p>
-                        </div>
-                    </div>
-                    <div class="comment">
-                        <img class="avatar" src="images/comments/com-15.jpg">
-                        <div class="comm_text">
-                            <p class="user_name">Ewa Mazurek</p>
-                            <p class="text">Dziewczyny, nie traćcie czasu na takie bzdury. Już z 10 razy robiłam wybielanie i wszystko, co tylko się da, ale to jednak nie to. Noszę te licówki już od ponad roku i ciągle dostaję mnóstwo komplementów. Jestem zachwycona!</p>
-                            <img src="images/comments/com-15-1.jpg" style="max-width: 230px;">
-                        </div>
-                        <div class="down-menu">
-                            <p class="down-menu-like">Podoba mi się</p>
-                            <p class="down-menu-answer none">Odpowiedz</p>
-                            <p class="down-menu-translate none">Przekazanie</p>
-                            <p class="time"> godzinę temu </p>
-                        </div>
-                    </div>
-                    <div class="comment">
-                        <img class="avatar" src="images/comments/com-16.jpg">
-                        <div class="comm_text">
-                            <p class="user_name">Dominika Zielińska</p>
-                            <p class="text">Moja teściowa kupiła te licówki. Są piękne! Prawdziwy hollywoodzki uśmiech. Teraz wygląda nawet młodziej niż wcześniej. Zamówiłam je również dla siebie!</p>
-                        </div>
-                        <div class="down-menu">
-                            <p class="down-menu-like">Podoba mi się</p>
-                            <p class="down-menu-answer none">Odpowiedz</p>
-                            <p class="down-menu-translate none">Przekazanie</p>
-                            <p class="time"> godzinę temu </p>
-                        </div>
-                    </div>
-                    <div class="comment">
-                        <img class="avatar" src="images/comments/com-17.jpg">
-                        <div class="comm_text">
-                            <p class="user_name">Aneta Zawadzka</p>
-                            <p class="text">Moje zęby wyglądają teraz jak prawdziwe, noszę je od czterech miesięcy i nie zmieniają koloru ani kształtu. Moje własne zęby są okropne, mam przerwę między zębami i kilka plam, a jeden wystaje z przodu. Moja mama zawsze mówiła: „Taka piękna dziewczyna, ale z tymi twoimi zębami trzeba coś zrobić”, ale ja nie mam pieniędzy i boję się dentystów. Zamówiłam SwissDent. Uważam, że piękne zęby zmieniają każdego!</p>
-                        </div>
-                        <div class="down-menu">
-                            <p class="down-menu-like">Podoba mi się</p>
-                            <p class="down-menu-answer none">Odpowiedz</p>
-                            <p class="down-menu-translate none">Przekazanie</p>
-                            <p class="time"> godzinę temu </p>
-                        </div>
-                    </div>
-                    <br>
-                    <a class="knopka" href="#form_section" style="display:block; max-width:400px; margin:0 auto">PEDIR <br>SWISSDENT</a>
-                    <br>&nbsp;<br>
                 </div>
             </div>
+            
             
         </div>
     </div>
